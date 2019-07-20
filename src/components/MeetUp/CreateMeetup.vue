@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
-        <h4>Create a new Meetup</h4>
+        <h2>Create a new Meetup</h2>
       </v-flex>
     </v-layout>
     <v-layout row>
@@ -66,7 +66,6 @@
           </v-layout>
           <v-layout row>
             <v-flex xs12 sm6 offset-sm3>
-              {{time}}
               <v-time-picker v-model="time" format="24hr"></v-time-picker>
             </v-flex>
           </v-layout>

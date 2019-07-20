@@ -69,8 +69,8 @@ export default {
     }
   },
   created () {
-      this.editedTitle = this.meetup.title,
-      this.editedDescription= this.meetup.description
+    this.editedTitle = this.meetup.title,
+    this.editedDescription = this.meetup.description
   }
 }
 </script>

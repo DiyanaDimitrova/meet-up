@@ -12,7 +12,7 @@
         </v-layout>
         <v-layout row wrap v-else>
         <v-flex xs12>
-            <v-card>
+            <v-card class="indigo lighten-4">
             <v-card-title>
                 <h6 class="primary--text">{{ meetup.title }}</h6>
                 <template v-if="userIsCreator">

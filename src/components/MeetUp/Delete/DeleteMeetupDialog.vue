@@ -41,8 +41,8 @@ export default {
   },
   methods: {
     onDelete () {
-        this.$store.dispatch('deleteMeetup', this.meetupId)
-        this.$router.push('/meetups')
+      this.$store.dispatch('deleteMeetup', this.meetupId)
+      this.$router.push('/meetups')
     }
   }
 }

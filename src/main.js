@@ -11,10 +11,9 @@ import EditMeetupDateDialog from './components/MeetUp/Edit/EditMeetupDateDialog.
 import EditMeetupTimeDialog from './components/MeetUp/Edit/EditMeetupTimeDialog.vue'
 import RegisterDialog from './components/MeetUp/Registration/RegisterDialog.vue'
 import DeleteMeetupDialog from './components/MeetUp/Delete/DeleteMeetupDialog.vue'
+import theme from './theme'
 
-import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
-
-Vue.use(Vuetify)
+Vue.use(Vuetify, { theme })
 Vue.config.productionTip = false
 
 Vue.filter('date', DateFilter)

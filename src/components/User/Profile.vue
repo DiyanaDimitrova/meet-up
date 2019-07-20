@@ -15,13 +15,13 @@
             <v-card>
             <v-card-title>
                 <h6 class="primary--text">{{ user }}</h6>
-               
+
             </v-card-title>
             <v-card-text>
-                
+
             </v-card-text>
             <v-card-actions>
-               
+
             </v-card-actions>
             </v-card>
         </v-flex>
@@ -36,7 +36,7 @@ export default {
     user () {
       return this.$store.getters.user
     },
-     loading () {
+    loading () {
       return this.$store.getters.loading
     }
   }

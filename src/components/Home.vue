@@ -12,7 +12,7 @@
       <v-flex xs12 class="text-xs-center">
         <v-progress-circular
           indeterminate
-          class="primary--text"
+          color="primary"
           :width="7"
           :size="70"
           v-if="loading"></v-progress-circular>
