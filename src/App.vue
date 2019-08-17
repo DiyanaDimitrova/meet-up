@@ -16,11 +16,13 @@
 
         <v-list-tile avatar tag="div">
           <v-list-tile-avatar>
-            <img src="https://randomuser.me/api/portraits/men/85.jpg">
+            <v-avatar color="primary">
+              <v-icon dark>account_circle</v-icon>
+            </v-avatar>
           </v-list-tile-avatar>
 
           <v-list-tile-content>
-            <v-list-tile-title>John Leider</v-list-tile-title>
+            <v-list-tile-title>{{user}}</v-list-tile-title>
           </v-list-tile-content>
 
           <v-list-tile-action>
@@ -64,7 +66,7 @@
           @click.stop="drawer = !drawer"
       ></v-toolbar-side-icon>
       <v-toolbar-title>
-        <router-link to="/" tag="span">Application</router-link>
+        <router-link to="/" tag="span">Meet me</router-link>
        </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
@@ -87,7 +89,7 @@
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <v-content>
+    <v-content class="main">
       <router-view></router-view>
     </v-content>
   </v-app>
@@ -119,6 +121,10 @@ export default {
     },
     userIsAuthenticated () {
       return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+    },
+    user () {
+      console.log('this.$store.getters.user',this.$store.getters.user)
+      return this.$store.getters.user
     }
   },
   methods: {
@@ -128,3 +134,12 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+span {
+  color: #FFEB3B
+}
+.main {
+  background-color: #FBFCF9;
+}
+</style>
+

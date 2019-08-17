@@ -7,13 +7,14 @@
     </v-layout>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
-        <v-card color="blue lighten-5">
+        <v-card class="primary">
           <v-card-text>
             <v-container>
               <form @submit.prevent="onSignin">
                 <v-layout row>
                   <v-flex xs12>
                     <v-text-field
+                      class="sign-in"
                       name="email"
                       label="Mail"
                       id="email"
@@ -35,7 +36,7 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-btn color="secondary" type="submit" :disabled="loading" :loading="loading">
+                    <v-btn class="accent" type="submit" :disabled="loading" :loading="loading">
                       Sign in
                        <span slot="loader" class="custom-loader">
                         <v-icon light>cached</v-icon>
@@ -88,3 +89,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.sign-in{
+  input {
+    border-style: solid !important;
+    border-color: #FFEB3B !important;
+  }
+  label {
+    color: #FFEB3B;
+  }
+}
+
+</style>

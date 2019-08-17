@@ -163,6 +163,11 @@ export default {
     featuredMeetups (state, getters) {
       return getters.loadedMeetups.slice(0, 5)
     },
+    userMeetups (state, getters) {
+      return state.loadedMeetups.filter((meetup) => {
+        return meetup.creatorId === getters.user.id
+      })
+    },
     loadedMeetup (state) {
       return (meetupId) => {
         return state.loadedMeetups.find((meetup) => {

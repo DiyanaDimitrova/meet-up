@@ -1,6 +1,6 @@
 <template>
   <v-dialog persistent v-model="registerDialog">
-      <v-btn color="secondary" accent slot="activator">
+      <v-btn color="primary" accent slot="activator">
           {{ userIsRegistered ? 'Unregister' : 'Register'}}
       </v-btn>
       <v-card>

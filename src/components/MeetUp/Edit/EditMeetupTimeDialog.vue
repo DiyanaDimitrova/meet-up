@@ -1,6 +1,6 @@
 <template>
   <v-dialog width="350px" persistent v-model="editDialog">
-      <v-btn accent slot="activator">
+      <v-btn color="secondary" class="primary--text" accent slot="activator">
          Edit Time
       </v-btn>
       <v-card>
@@ -19,8 +19,12 @@
                         format="24hr"
                         actions>
                         <template scope="{save, cancel}">
-                            <v-btn flat class="blue--text darken-1" @click="editDialog=false">Close</v-btn>
-                            <v-btn flat class="blue--text darken-1" @click="onSaveChanges">Save</v-btn>
+                            <v-flex xs6>
+                              <v-btn color="secondary" flat class="ma-auto blue--text darken-1" @click="editDialog=false">Close</v-btn>
+                            </v-flex>
+                            <v-flex xs6>
+                              <v-btn color="primary" flat class="ma-auto blue--text darken-1" @click="onSaveChanges">Save</v-btn>
+                            </v-flex>
                         </template>
                     </v-time-picker>
                 </v-flex>

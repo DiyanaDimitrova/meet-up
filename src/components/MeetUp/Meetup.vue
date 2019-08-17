@@ -12,9 +12,9 @@
         </v-layout>
         <v-layout row wrap v-else>
         <v-flex xs12>
-            <v-card class="indigo lighten-4">
+            <v-card class="deep-purple lighten-3">
             <v-card-title>
-                <h6 class="primary--text">{{ meetup.title }}</h6>
+                <h3 class="primary--text">{{ meetup.title }}</h3>
                 <template v-if="userIsCreator">
                     <v-spacer></v-spacer>
                     <app-edit-meetup-dialog :meetup="meetup"></app-edit-meetup-dialog>
@@ -26,7 +26,7 @@
                 height="400px"
             ></v-img>
             <v-card-text>
-                <div class="info--text">{{ meetup.date | date }} - {{ meetup.location }}</div>
+                <div class="primary--text">{{ meetup.date | date }} - {{ meetup.location }}</div>
                 <div>
                     <app-edit-meetup-date-dialog :meetup="meetup" v-if="userIsCreator">
                     </app-edit-meetup-date-dialog>
